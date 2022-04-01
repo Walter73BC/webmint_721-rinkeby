@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0x7b69aD2c7B82735c8807B0A47973Cfa2282C8f0d",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/token/0x7b69aD2c7B82735c8807B0A47973Cfa2282C8f0d",
+  "NETWORK": {
+    "NAME": "Rinkeby",
+    "SYMBOL": "ETH",
+    "ID": 4
+  },
+  "NFT_NAME": "The WChain NFT",
+  "SYMBOL": "BCT3",
+  "MAX_SUPPLY": 1000,
+  "WEI_COST": 1000000000000000,
+  "DISPLAY_COST": 0.001,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/bc721a2",
+  "SHOW_BACKGROUND": true
+}
