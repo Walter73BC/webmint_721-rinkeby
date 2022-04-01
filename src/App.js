@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
@@ -413,8 +413,9 @@ function App() {
               textAlign: "center",
               color: "var(--primary-text)",
             }}
-           >
-            Please make sure you are connected to the right network and the correct address. Please note:
+          >
+            Please make sure you are connected to the right network (
+            {CONFIG.NETWORK.NAME} ) and the correct address. Please note:
             Once you make the purchase, you cannot undo this action.
           </s.TextDescription>
           <s.SpacerSmall />
@@ -423,7 +424,7 @@ function App() {
               textAlign: "center",
               color: "var(--primary-text)",
             }}
-            >
+          >
             We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to
             successfully mint your NFT. We recommend that you don't lower the
             gas limit.
