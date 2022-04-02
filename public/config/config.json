@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0x0b65e0536d92Df6992aF667Bb820DB47A1351e69",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/token/0x0b65e0536d92Df6992aF667Bb820DB47A1351e69",
+  "CONTRACT_ADDRESS": "0x7E3Aba19af03a83A127fb36AD3364bC40f233E51",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/token/0x7E3Aba19af03a83A127fb36AD3364bC40f233E51",
   "NETWORK": {
     "NAME": "Rinkeby",
     "SYMBOL": "ETH",
     "ID": 4
   },
-  "NFT_NAME": "WChain-712abNFT",
-  "SYMBOL": "WCTB",
+  "NFT_NAME": "WChain-NFT",
+  "SYMBOL": "WCTC",
   "MAX_SUPPLY": 1000,
   "WEI_COST": 5000000000000000,
   "DISPLAY_COST": 0.05,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/wc721tab",
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/wc721tac",
   "SHOW_BACKGROUND": true
 }
