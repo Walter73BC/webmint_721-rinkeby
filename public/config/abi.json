@@ -2,18 +2,47 @@
 	{
 		"inputs": [
 			{
-				"internalType": "address",
-				"name": "_user",
-				"type": "address"
+				"internalType": "address[100]",
+				"name": "_users",
+				"type": "address[100]"
 			}
 		],
-		"name": "removeWhitelistUser",
+		"name": "add100PresaleUsers",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
-		"inputs": [],
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			}
+		],
+		"name": "addPresaleUser",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_symbol",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_initBaseURI",
+				"type": "string"
+			}
+		],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
 	},
@@ -63,8 +92,13 @@
 	{
 		"inputs": [
 			{
+				"internalType": "address",
+				"name": "_to",
+				"type": "address"
+			},
+			{
 				"internalType": "uint256",
-				"name": "_quantity",
+				"name": "_mintAmount",
 				"type": "uint256"
 			}
 		],
@@ -193,6 +227,45 @@
 		"type": "event"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "_state",
+				"type": "bool"
+			}
+		],
+		"name": "pause",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			}
+		],
+		"name": "removePresaleUser",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			}
+		],
+		"name": "removeWhitelistUser",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"name": "renounceOwnership",
 		"outputs": [],
@@ -272,6 +345,58 @@
 		"inputs": [
 			{
 				"internalType": "string",
+				"name": "_newBaseExtension",
+				"type": "string"
+			}
+		],
+		"name": "setBaseExtension",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_newBaseURI",
+				"type": "string"
+			}
+		],
+		"name": "setBaseURI",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_newCost",
+				"type": "uint256"
+			}
+		],
+		"name": "setCost",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_newmaxMintAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "setmaxMintAmount",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
 				"name": "_placeholderTokenUri",
 				"type": "string"
 			}
@@ -284,26 +409,12 @@
 	{
 		"inputs": [
 			{
-				"internalType": "string",
-				"name": "_baseTokenUri",
-				"type": "string"
+				"internalType": "uint256",
+				"name": "_newCost",
+				"type": "uint256"
 			}
 		],
-		"name": "setTokenUri",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "togglePause",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "togglePublicSale",
+		"name": "setPresaleCost",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -311,13 +422,6 @@
 	{
 		"inputs": [],
 		"name": "toggleReveal",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "toggleWhiteListSale",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -386,19 +490,6 @@
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "_quantity",
-				"type": "uint256"
-			}
-		],
-		"name": "whitelistMint",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
 				"internalType": "address",
 				"name": "_user",
 				"type": "address"
@@ -425,6 +516,45 @@
 			}
 		],
 		"name": "balanceOf",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "baseExtension",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "baseURI",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "cost",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -493,7 +623,7 @@
 	},
 	{
 		"inputs": [],
-		"name": "MAX_PUBLIC_MINT",
+		"name": "maxMintAmount",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -506,20 +636,7 @@
 	},
 	{
 		"inputs": [],
-		"name": "MAX_SUPPLY",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "MAX_WHITELIST_MINT",
+		"name": "maxSupply",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -577,7 +694,7 @@
 	},
 	{
 		"inputs": [],
-		"name": "pause",
+		"name": "paused",
 		"outputs": [
 			{
 				"internalType": "bool",
@@ -603,7 +720,7 @@
 	},
 	{
 		"inputs": [],
-		"name": "PUBLIC_SALE_PRICE",
+		"name": "presaleCost",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -615,8 +732,14 @@
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "publicSale",
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "presaleWallets",
 		"outputs": [
 			{
 				"internalType": "bool",
@@ -722,25 +845,6 @@
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "totalPublicMint",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
 		"inputs": [],
 		"name": "totalSupply",
 		"outputs": [
@@ -757,42 +861,16 @@
 		"inputs": [
 			{
 				"internalType": "address",
-				"name": "",
+				"name": "_owner",
 				"type": "address"
 			}
 		],
-		"name": "totalWhitelistMint",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "walletOf",
+		"name": "walletOfOwner",
 		"outputs": [
 			{
 				"internalType": "uint256[]",
 				"name": "",
 				"type": "uint256[]"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "WHITELIST_SALE_PRICE",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -807,19 +885,6 @@
 			}
 		],
 		"name": "whitelisted",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "whiteListSale",
 		"outputs": [
 			{
 				"internalType": "bool",
