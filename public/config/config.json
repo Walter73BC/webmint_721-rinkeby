@@ -1,13 +1,13 @@
 {
-  "CONTRACT_ADDRESS": "0x7E3Aba19af03a83A127fb36AD3364bC40f233E51",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/token/0x7E3Aba19af03a83A127fb36AD3364bC40f233E51",
+  "CONTRACT_ADDRESS": "0x804861FF67Da3DB9dAc48455D1a0cDAC9740bE71",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/token/0x804861FF67Da3DB9dAc48455D1a0cDAC9740bE71",
   "NETWORK": {
     "NAME": "Rinkeby",
     "SYMBOL": "ETH",
     "ID": 4
   },
   "NFT_NAME": "WChain-NFT",
-  "SYMBOL": "WCTC",
+  "SYMBOL": "WCTD",
   "MAX_SUPPLY": 1000,
   "WEI_COST": 5000000000000000,
   "DISPLAY_COST": 0.05,
