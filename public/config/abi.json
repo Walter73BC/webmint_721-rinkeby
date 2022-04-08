@@ -36,11 +36,6 @@
 				"internalType": "string",
 				"name": "_symbol",
 				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_initBaseURI",
-				"type": "string"
 			}
 		],
 		"stateMutability": "nonpayable",
@@ -91,11 +86,6 @@
 	},
 	{
 		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_to",
-				"type": "address"
-			},
 			{
 				"internalType": "uint256",
 				"name": "_mintAmount",
