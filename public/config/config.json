@@ -1,10 +1,10 @@
 {
-  "CONTRACT_ADDRESS": "0x53b6647a239d7575a3000d3A0bCf8595bd183E08",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/token/0x53b6647a239d7575a3000d3A0bCf8595bd183E08",
+  "CONTRACT_ADDRESS": "0xCF0658023EC4e9390fAEf08f0Eb09dA76BEDf1Ac",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/token/0xCF0658023EC4e9390fAEf08f0Eb09dA76BEDf1Ac",
   "NETWORK": {
     "NAME": "Rinkeby",
     "SYMBOL": "ETH",
-    "ID": 4
+    "ID": "4"
   },
   "NFT_NAME": "WC721TAE",
   "SYMBOL": "WCTE",
